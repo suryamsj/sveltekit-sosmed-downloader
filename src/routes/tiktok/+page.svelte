@@ -83,7 +83,7 @@
 							<h3>{form?.response.author}</h3>
 							<p>{form?.response.description}</p>
 							<div class="mt-3">
-								<a href={form?.response.media} class="btn btn-video" target="_blank"
+								<a href={form?.response.media} class="btn btn-video mb-3" target="_blank"
 									>Download Video</a
 								>
 								<a href={form?.response.music} class="btn btn-music" target="_blank"
