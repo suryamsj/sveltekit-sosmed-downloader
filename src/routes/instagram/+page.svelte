@@ -81,7 +81,7 @@
 					<div class="card">
 						<div class="card-body">
 							{#each form.response as item, i}
-								<a href={item.url}>Download {i}</a>
+								<a href={item.url} class="btn btn-video">Download {i + 1}</a>
 							{/each}
 						</div>
 					</div>
