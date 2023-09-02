@@ -26,18 +26,18 @@
 </script>
 
 <svelte:head>
-	<title>Sosmed Downloader - Youtube</title>
+	<title>Sosmed Downloader - Instagram</title>
 	<meta
 		name="description"
-		content="Download vidio maupun audio dari Youtube menjadi lebih mudah dan simple."
+		content="Download vidio maupun audio dari Instagram menjadi lebih mudah dan simple."
 	/>
 </svelte:head>
 <section class="py-5">
 	<div class="container">
 		<div class="row mb-3">
 			<div class="col-lg-12 col-md-12 col-12">
-				<h1 class="title">Youtube Downloader</h1>
-				<p class="description">Website untuk mendownload vidio dan musik Youtube.</p>
+				<h1 class="title">Instagram Downloader</h1>
+				<p class="description">Website untuk mendownload vidio atau poto instagram.</p>
 			</div>
 		</div>
 		<div class="row justify-content-center mb-3">
@@ -75,21 +75,14 @@
 				{/if}
 			</div>
 		</div>
-		{#if form?.response}
+		{#if form?.success === true}
 			<div class="row justify-content-center">
 				<div class="col-lg-6 col-md-12 col-12">
 					<div class="card">
 						<div class="card-body">
-							<h3>{form?.response.title}</h3>
-							<p>{form?.response.channel}</p>
-							<div class="mt-3">
-								<a href={form?.response.video} class="btn btn-video mb-3" target="_blank"
-									>Download Video</a
-								>
-								<a href={form?.response.audio} class="btn btn-music" target="_blank"
-									>Download Music</a
-								>
-							</div>
+							{#each form.response as item, i}
+								<a href={item.url}>Download {i}</a>
+							{/each}
 						</div>
 					</div>
 				</div>

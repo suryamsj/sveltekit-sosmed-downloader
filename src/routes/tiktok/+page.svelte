@@ -75,8 +75,8 @@
 				{/if}
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			{#if form?.response}
+		{#if form?.response}
+			<div class="row justify-content-center">
 				<div class="col-lg-6 col-md-12 col-12">
 					<div class="card">
 						<div class="card-body">
@@ -93,7 +93,18 @@
 						</div>
 					</div>
 				</div>
-			{/if}
-		</div>
+			</div>
+		{/if}
+		{#if form?.error === true}
+			<div class="row justify-content-center">
+				<div class="col-lg-6 col-md-12 col-12">
+					<div class="card">
+						<div class="card-body">
+							<h3>{form?.message}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		{/if}
 	</div>
 </section>

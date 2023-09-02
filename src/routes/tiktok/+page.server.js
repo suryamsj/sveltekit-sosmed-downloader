@@ -13,23 +13,30 @@ async function sleep(ms) {
 /** @type {import('./$types').Actions} */
 export const actions = {
     default: async ({ request }) => {
-        const formData = Object.fromEntries(await request.formData());
+        try {
+            const formData = Object.fromEntries(await request.formData());
 
-        const url = formData.url;
+            const url = formData.url;
 
-        await sleep(2000);
+            await sleep(2000);
 
-        const checkLink = containsTikTokLink(url.toString());
+            const checkLink = containsTikTokLink(url.toString());
 
-        const validate = {
-            success: false, message: "Link yang anda masukkan, bukan merupakan link dari Tiktok!."
+            const validate = {
+                success: false, message: "Link yang anda masukkan, bukan merupakan link dari Tiktok!."
+            }
+
+            if (checkLink === false) return fail(422, validate);
+
+            const response = await axios.get(`${API_ENDPOINT}/tiktok?link=${url}`);
+            const data = await response.data;
+
+            return { success: true, response: data.respon }
+        } catch (error) {
+            const failed = {
+                error: true, message: "Server Error"
+            }
+            return fail(500, failed)
         }
-
-        if (checkLink === false) return fail(422, validate);
-
-        const response = await axios.get(`${API_ENDPOINT}/tiktok?link=${url}`);
-        const data = await response.data;
-
-        return { success: true, response: data.respon }
     }
 };

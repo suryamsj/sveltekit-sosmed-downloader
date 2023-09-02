@@ -18,6 +18,7 @@
 					<a href="/tiktok" class="menu-item tiktok">Tiktok</a>
 					<a href="/youtube" class="menu-item youtube">Youtube</a>
 					<a href="/facebook" class="menu-item facebook">Facebook</a>
+					<a href="/instagram" class="menu-item instagram">Instagram</a>
 				</div>
 			</div>
 		</div>
