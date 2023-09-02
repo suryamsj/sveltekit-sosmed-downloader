@@ -1,0 +1,71 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/spinners";
+
+$white:#ffffff;
+$gray:#444444;
+$main:#ECE6C2;
+$secondary:#73BDA8;
+$tertiary:#0E9BEA;
+$stroke:#000000;
+$instagram:#D0B229;
+$tiktok:#444444;
+$facebook:#3C86BA;
+$youtube:#964F3E;
+
+// Fonts
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/static/fonts/Inter-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    src: url('/static/fonts/Inter-Medium.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    src: url('/static/fonts/Inter-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    src: url('/static/fonts/Inter-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    src: url('/static/fonts/Inter-ExtraBold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    src: url('/static/fonts/Inter-Black.ttf') format('ttf');
+}
